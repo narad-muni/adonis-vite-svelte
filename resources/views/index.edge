@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+  <title>Adonis Vite Demo</title>
+
+  @if(isDev)
+    <script type="module" src="http://localhost:5173/@vite/client"></script>
+    <script type="module" src="http://localhost:5173/src/main.js"></script>
+  @end
+
+  @if(assetsData.found)
+    @each(css in assetsData.css)
+    <link rel="stylesheet" type="text/css" href="{{css}}">
+    @end
+    @each(js in assetsData.js)
+    <script type="module" src="{{js}}" defer></script>
+    @end
+  @end
+</head>
+<body>
+  <div id="app">
+  </div>
+</body>
+</html>
