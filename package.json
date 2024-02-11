@@ -10,7 +10,7 @@
     "start": "node bin/server.js",
     "build": "node ace build && cd frontend && npm run build && cd .. && npm run clean_build",
     "clean_build": "sed -i '' 's/development/production/g' build/.env",
-    "dev": "concurrently \"cd frontend && npm run dev\" \"node ace serve --watch\"",
+    "dev": "npx concurrently \"cd frontend && npm run dev\" \"node ace serve --watch\"",
     "test": "node ace test",
     "lint": "eslint .",
     "format": "prettier --write .",
