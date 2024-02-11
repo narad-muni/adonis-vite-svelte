@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Adonis JS Debugger Full Stack",
+        "runtimeExecutable": "npx",
+        "runtimeArgs": ["concurrently", "cd frontend && npm run dev", "node ace serve --watch"],
+        "internalConsoleOptions": "openOnSessionStart"
+      }
+    ]
+  }
